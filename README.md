@@ -1,2 +1,10 @@
-# Full-Auth-Login-Signup-Admin-Via-OTP-Password-Repo
-🔐 Full Auth System (OTP &amp; Password) Complete Node.js backend for user/admin login &amp; signup using OTP (email/phone) or email + password. Includes JWT auth, OTP expiry handling, and admin flow.
+
+### 🔐 Full Authentication System – OTP/Password Login & Admin Access
+
+This repository contains a **complete authentication backend** built with Node.js, Express, and MongoDB. It supports:
+
+* ✅ User Login/Signup via **OTP (phone/email)**
+* 🔒 Login via **Email + Password**
+* 👮‍♂️ Dedicated **Admin Login flow**
+* 📆 **OTP expiration handling** (without deletion)
+* 🔐 **JWT token-based authentication**
