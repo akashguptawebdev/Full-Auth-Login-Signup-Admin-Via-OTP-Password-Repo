@@ -1,0 +1,223 @@
+@use '../../color/CustomColor.scss' as *;
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0c1220;
+
+  .left-panel {
+    width: 50%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    .admin-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .right-panel {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c1220;
+
+    .login-box {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 380px;
+      text-align: center;
+    }
+  }
+
+  .admin-logo-container{
+   width: 50%;
+
+    .admin-logo {
+      border-radius: 50%;
+      background-color: #1976d2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: $PRUSSIAN-80;
+}
+
+.sub-text {
+  color: $GREY-80;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+
+  .otp-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    input {
+      width: 40px;
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  }
+
+  .send-otp {
+    background: #1976d2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 16px;
+
+    
+  }
+
+  button{
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 16px;
+    .spinner {
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(0, 0, 0, 0.1);
+      border-top: 3px solid white; // primary color
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: auto;
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
+
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+
+    input {
+      margin: 0;
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+
+  .sign-in-btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.terms-text {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.signup-link {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+
+  a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    .left-panel{
+      display: none;
+    }
+    .right-panel{
+      width: 100%;
+      padding: 20px;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom:0;
+    }
+
+    .right-panel {
+      height: auto;
+      padding: 20px;
+    }
+
+    .admin-image {
+      height: 100%;
+    }
+  }
+}

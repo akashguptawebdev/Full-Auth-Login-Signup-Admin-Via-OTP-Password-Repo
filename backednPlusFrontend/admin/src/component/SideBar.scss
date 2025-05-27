@@ -1,0 +1,141 @@
+@use '../color/CustomColor.scss' as *;
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+  padding: 1.2rem;
+  height: 100vh;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+  z-index: 999;
+  animation: slideInSidebar 0.4s ease-in-out forwards;
+  position: fixed;
+  border-right: 1px solid #e5e7eb;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      cursor: pointer;
+      color: $PRUSSIAN-40;
+      transition: all 0.2s ease;
+      &:hover {
+        color: $PRUSSIAN-80;
+        transform: rotate(90deg);
+      }
+    }
+
+    .logo_icon {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: $PRUSSIAN-60;
+      }
+    }
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-size: 15px;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #334155;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background-color: #f1f5f9;
+    }
+
+    &.active {
+      background-color: #e0f2fe;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+  }
+
+  .menu-group {
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      padding-left: 2.2rem;
+      font-size: 13px;
+      color: #6b7280;
+      gap: 4px;
+
+      span {
+        padding: 4px 0;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &.active {
+          color: #1d4ed8;
+          font-weight: 600;
+        }
+
+        &:hover {
+          background-color: #f1f5f9;
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    .logo h2 {
+      display: none;
+    }
+  }
+}
+
+@keyframes slideInSidebar {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

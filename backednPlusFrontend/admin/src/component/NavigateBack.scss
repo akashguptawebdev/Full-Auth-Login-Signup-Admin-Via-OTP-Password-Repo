@@ -1,0 +1,46 @@
+@use '../color/CustomColor.scss' as *;
+.Back-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+  
+    // Hide on mobile screens
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+  
+  .aware-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #dbeafe;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .Page-text{
+    color: $PRUSSIAN-80;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+  }
+  
+  .back-icon {
+    width: 20px;
+    height: 20px;
+    color: $PRUSSIAN-80;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .back-icon:hover {
+    transform: translateX(-4px);
+    color: #2563eb;
+  }
+  

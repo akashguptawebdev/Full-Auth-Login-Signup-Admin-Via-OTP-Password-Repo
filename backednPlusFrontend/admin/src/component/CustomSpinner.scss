@@ -1,0 +1,27 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; // or fixed height like 300px if needed
+    width: 100%;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #007bff; // blue top for spinning effect
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  // Keyframes for the spinning animation
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

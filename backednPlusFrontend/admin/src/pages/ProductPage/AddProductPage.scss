@@ -1,0 +1,63 @@
+@use '../../color/CustomColor.scss' as *;
+.add_product_main_Container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    h1 {
+      text-align: start;
+      font-size: 2rem;
+      font-family: sans-serif;
+      color: $PRUSSIAN-80;
+
+    }
+  
+    .product_screen {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 6rem;
+      flex-direction: row;
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .product_screen {
+        flex-wrap: wrap;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+        h1{
+            text-align: center;
+        }
+      .product_screen {
+        flex-direction: column; // ✅ Stack on tablet
+        align-items: center;
+      }
+    }
+  
+    @media screen and (max-width: 480px) {
+      h1 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+  
+      .product_screen {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+  
+    @media screen and (max-width: 320px) {
+      h1 {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+  
+      .product_screen {
+        gap: 1rem;
+      }
+    }
+  }
+  

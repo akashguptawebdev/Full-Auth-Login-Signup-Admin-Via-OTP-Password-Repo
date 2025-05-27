@@ -1,0 +1,76 @@
+.global-search {
+  position: relative;
+  width: 300px;
+
+  input {
+    width: 100%;
+    padding: 8px 40px 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    font-size: 14px;
+
+    &:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+  }
+
+  // ✅ Responsive Breakpoints
+
+  @media screen and (max-width: 1024px) {
+    width: 250px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    input {
+      font-size: 13px;
+      padding: 8px 36px 8px 12px;
+    }
+
+    .search-icon {
+      right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    input {
+      font-size: 12px;
+      padding: 6px 32px 6px 10px;
+    }
+
+    .search-icon {
+      right: 10px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    input {
+      font-size: 11px;
+      padding: 6px 28px 6px 8px;
+    }
+
+    .search-icon {
+      right: 8px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

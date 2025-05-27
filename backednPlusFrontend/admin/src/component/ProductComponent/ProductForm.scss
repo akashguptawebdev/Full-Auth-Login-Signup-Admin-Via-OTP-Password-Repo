@@ -1,0 +1,87 @@
+.product-form {
+  background-color: #0e1b2c;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+
+      .required {
+        color: red;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background-color: #1c2c3f;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    small {
+      margin-top: 0.25rem;
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1rem;
+
+    .form-group {
+      flex: 1;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  // Responsive padding & spacing
+  @media screen and (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    .form-group {
+      input,
+      select,
+      textarea {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 0.75rem;
+
+    .form-group {
+      input,
+      select,
+      textarea {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
